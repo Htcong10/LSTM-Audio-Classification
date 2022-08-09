@@ -18,7 +18,7 @@ Author:  Ho Trung Cong 20194237
 * clean: a functional-based module that contains functions for data preprocessing and save data for training model
 * train:  a functional-based module that contains functions for training and save LSTM model
 * predict :  a functional-based module that contains functions for testing model
-## *** File***
+## ***File***
 * audio_train : folder include files to training model
 * Testpredict : folder include files to testing model
 * test.csv : a file include label of files testing to model evaluation
