@@ -49,7 +49,6 @@ pycparser==2.19
 Pygments==2.6.1
 pyparsing==2.4.6
 python-dateutil==2.8.1
-python-speech-features==0.6
 pytz==2019.3
 PyYAML==5.3.1
 pyzmq==19.0.0
@@ -71,7 +70,6 @@ tornado==6.0.4
 tqdm==4.43.0
 traitlets==4.3.3
 urllib3==1.25.8
-wavio==0.0.4
 wcwidth==0.1.8
 Werkzeug==1.0.0
 wrapt==1.12.0
