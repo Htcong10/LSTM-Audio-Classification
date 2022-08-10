@@ -50,14 +50,12 @@ def split_wavs(direct, toDirect, dtTime, sr, threshold):
             mask = envelope(signal, rate, threshold=threshold)
             signal = signal[mask]
             delta_sample = int(dt * rate)
-            # cleaned audio is less than a single sample
-            # pad with zeros to delta_sample size
+
             if signal.shape[0] < delta_sample:
                 sample = np.zeros(shape=(delta_sample,), dtype=np.float32)
                 sample[:signal.shape[0]] = signal
                 save_sample(sample, rate, target_dir, fn, 0)
-            # step through audio and save every delta_sample
-            # discard the ending audio if it is too short
+
             else:
                 trunc = signal.shape[0] % delta_sample
                 for cnt, i in enumerate(np.arange(0, signal.shape[0] - trunc, delta_sample)):
