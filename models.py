@@ -14,8 +14,8 @@ def LSTM(N_CLASSES=10, SR=16000, DT=1.0):
                                      sample_rate=SR,
                                      return_decibel=True,
                                      input_data_format='channels_last',
-                                     output_data_format='channels_last',
-                                     name='2d_convolution')
+                                     output_data_format='channels_last'
+                                     )
     x = LayerNormalization(axis=2, name='batch_norm')(i.output)
     x = TimeDistributed(layers.Reshape((-1,)), name='reshape')(x)
     s = TimeDistributed(layers.Dense(64, activation='tanh'),
