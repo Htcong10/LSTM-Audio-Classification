@@ -31,7 +31,7 @@ class DataGenerator(tf.keras.utils.Sequence):
         wav_paths = [self.wav_paths[k] for k in indexes]
         labels = [self.labels[k] for k in indexes]
 
-        # generate a batch of time data
+    
         X = np.empty((self.batch_size, int(self.sr*self.dt), 1), dtype=np.float32)
         Y = np.empty((self.batch_size, self.n_classes), dtype=np.float32)
 
